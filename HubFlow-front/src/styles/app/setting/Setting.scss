@@ -1,0 +1,507 @@
+/* 
+    날짜 : 2024/11/26
+    이름 : 최영진
+    내용 : 관리자 설정 스타일생성
+
+    추가내역
+    -------------
+    12.02 박수정 - 관리자 설정 스타일수정
+*/
+
+.settingBox {
+  padding: 10px;
+  width: 100%;
+  flex-direction: column;
+
+  h3 {
+    font-size: 22px;
+  }
+
+  h4 {
+    padding-left: 10px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  h5 {
+    padding-left: 10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+    padding: 17px 0;
+  }
+
+  .switch {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .notiName {
+    display: inline-block;
+    width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  input {
+    display: none;
+  }
+
+  button,
+  textarea {
+    outline: none;
+    padding: 5px 10px;
+    margin-left: 3px;
+  }
+
+  .sliderBox {
+    margin-left: 100px;
+    position: relative;
+    cursor: pointer;
+    padding: 6.5px 25px;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.4s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2.5px;
+      left: 4px;
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      border-radius: 50%;
+      transition:
+        transform 0.4s,
+        background-color 0.4s;
+    }
+  }
+
+  /* 체크 상태일 때 슬라이더 박스 배경색 변경 */
+  input:checked + .sliderBox {
+    background-color: #4caf50;
+  }
+
+  /* 체크 상태일 때 원의 위치 이동 및 색상 변경 */
+  input:checked + .sliderBox::before {
+    transform: translateX(21px);
+    background-color: white;
+  }
+
+  .myPage,
+  .svaeBtn {
+    width: 100px;
+    padding: 8px 10px;
+  }
+
+  .tema {
+    font-size: 15px;
+    margin-right: 20px;
+  }
+
+  select {
+    padding: 5px 10px;
+  }
+
+  .userSetting {
+    display: flex;
+    padding: 10px;
+    width: 100%;
+
+    table {
+      padding: 5px;
+      width: 800px;
+      border-spacing: 0px;
+
+      input {
+        display: block;
+      }
+
+      td {
+        padding: 10px;
+        height: 50px;
+        border-bottom: 1px solid #ccc;
+        font-size: 16px;
+        align-items: center;
+      }
+
+      td:last-child {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .statusM {
+        height: 100px;
+
+        td {
+          height: 100px;
+        }
+      }
+
+      .buttonGroup {
+        display: flex;
+      }
+
+      textarea {
+        font-size: 16px;
+        border: none;
+        resize: none;
+        box-sizing: border-box;
+        background-color: #f7f7f7;
+      }
+
+      .saveButton,
+      .setingButton {
+        padding: 5px 10px;
+        font-size: 14px;
+        cursor: pointer;
+        margin-right: 5px;
+        border: 1px solid #444746;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        color: #444746;
+        transition: all 0.3s ease;
+      }
+
+      .cancelButton {
+        padding: 5px 10px;
+        font-size: 14px;
+        cursor: pointer;
+        margin-right: 5px;
+        border: 1px solid #444746;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        color: #444746;
+        transition: all 0.3s ease;
+      }
+
+      .saveButton:hover,
+      .setingButton:hover,
+      .cancelButton:hover {
+        background-color: #e6e6e6;
+        border-color: #444746;
+        color: #333;
+      }
+    }
+
+    .btnBox {
+      width: 100%;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        padding: 5px 10px;
+        font-size: 14px;
+        cursor: pointer;
+        margin-right: 5px;
+        border: 1px solid #444746;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        color: #444746;
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #e6e6e6;
+        border-color: #444746;
+        color: #333;
+      }
+    }
+
+    .changePass {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+
+      button {
+        padding: 5px 10px;
+        font-size: 14px;
+        cursor: pointer;
+        margin-right: 5px;
+        border: 1px solid #444746;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        color: #444746;
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #e6e6e6;
+        border-color: #444746;
+        color: #333;
+      }
+    }
+
+    .btnBox td {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .imgBox {
+      justify-items: center;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .userImg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      button {
+        padding: 5px 10px;
+        font-size: 14px;
+        cursor: pointer;
+        margin-right: 5px;
+        border: 1px solid #444746;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        color: #444746;
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #e6e6e6;
+        border-color: #444746;
+        color: #333;
+      }
+    }
+  }
+
+  .pageSetting {
+    div {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+    }
+    input {
+      display: block;
+    }
+    h4 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .backgroundSettings,
+    .temaSettings {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+
+      .PageBackground {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-radius: 8px;
+        background: #eee;
+
+        button {
+          padding: 5px 10px;
+          font-size: 14px;
+          cursor: pointer;
+          margin-right: 5px;
+          border: 1px solid #444746;
+          border-radius: 8px;
+          background-color: #f9f9f9;
+          color: #444746;
+          transition: all 0.3s ease;
+        }
+        button:hover {
+          background-color: #e6e6e6;
+          border-color: #444746;
+          color: #333;
+        }
+      }
+
+      span {
+        font-size: 15px;
+        width: 150px;
+        display: inline-block;
+      }
+
+      select {
+        padding: 6px 10px;
+        margin-left: 10px;
+      }
+      .temaBtn {
+        padding: 6px 10px;
+      }
+    }
+  }
+
+  .calendarSetting {
+    div {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    h4 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+
+  .messageSetting {
+    div {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+  }
+
+  .articleSetting {
+    div {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+  }
+
+  .projectSetting {
+    div {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+  }
+
+  .driveSetting {
+    div {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+  }
+  .projectSetting {
+    /* 컨테이너 기본 스타일 */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    h5 {
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .inputGroup {
+      display: flex;
+      align-items: center;
+      gap: 10px; /* 입력 필드와 버튼 사이 간격 */
+      margin-bottom: 20px;
+
+      input {
+        display: block !important; /* 전역 display: none을 무시 */
+        width: 300px; /* 고정 길이 설정 */
+        padding: 8px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #fff;
+        box-sizing: border-box;
+      }
+
+      button {
+        padding: 8px 16px;
+        font-size: 14px;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    }
+
+    .roomTable {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: center;
+      }
+
+      th {
+        background-color: #f5f5f5;
+        font-weight: bold;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+
+      button {
+        padding: 4px 8px;
+        font-size: 12px;
+        color: #fff;
+        background-color: #d9534f;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #c9302c;
+      }
+    }
+  }
+}

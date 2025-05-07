@@ -1,0 +1,98 @@
+.userInfoBox {
+  align-items: center;
+  justify-items: center;
+  h3 {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  input {
+    background-color: #f7f7f7;
+  }
+
+  table {
+    padding: 5px;
+    width: 800px;
+    border-spacing: 0px;
+
+    td {
+      padding: 10px;
+      height: 50px;
+      border-bottom: 1px solid;
+      font-size: 16px;
+      align-items: center;
+    }
+
+    td:last-child {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    tr:first-child {
+      height: 150px;
+
+      td {
+        height: 150px;
+
+        img {
+          width: 120px;
+          height: 120px;
+          justify-items: center;
+        }
+
+        button {
+          padding: 8px 10px;
+        }
+      }
+    }
+
+    .statusM {
+      height: 100px;
+
+      td {
+        height: 100px;
+      }
+    }
+
+    .buttonGroup {
+      display: flex;
+      /* 버튼 간의 간격을 일정하게 유지 */
+    }
+
+    textarea {
+      font-size: 16px;
+      border: none;
+      resize: none;
+      box-sizing: border-box;
+      background-color: #f7f7f7;
+    }
+
+    .saveButton,
+    .setingButton {
+      padding: 8px 10px;
+      background-color: blue;
+      color: white;
+      margin-left: 10px;
+    }
+
+    .cancelButton {
+      padding: 8px 10px;
+      background-color: blue;
+      color: white;
+      margin-left: 5px;
+    }
+  }
+
+  .btnBox {
+    justify-content: flex-end;
+    width: 800px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    /* 버튼과 다른 요소들 간의 간격 */
+    button {
+      padding: 8px 10px;
+    }
+  }
+}

@@ -1,0 +1,158 @@
+/* 
+날짜 : 2024/11/21
+이름 : 박수정
+내용 : 헤더, 푸터 스타일 생성
+*/
+
+/* 공통 스타일 */
+@font-face {
+  font-family: "KakaoRegular";
+  src: url("/fonts/KakaoRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "KakaoRegular", sans-serif;
+  font-size: 13px;
+}
+
+body {
+  margin: 0;
+  font-family: "KakaoRegular", sans-serif;
+}
+
+/* 헤더 스타일 */
+.main-header {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px 24px;
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo img {
+    width: 35%;
+  }
+
+  .nav {
+    ul {
+      display: flex;
+      list-style: none;
+
+      li {
+        margin: 0 15px;
+
+        a {
+          text-decoration: none;
+          color: #333;
+          font-weight: bold;
+          padding: 8px 10px;
+          font-size: 16px;
+
+          &:hover {
+            color: #00c473;
+          }
+        }
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+  }
+
+  .home,
+  .login {
+    padding: 13px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .home {
+    background-color: #fff;
+    color: #00c473;
+    border: 1px solid #ddd;
+
+    &:hover {
+      background-color: #f9f9f9;
+    }
+  }
+
+  .login {
+    background-color: #00c473;
+    color: #fff;
+    border: none;
+
+    &:hover {
+      background-color: #18a046;
+    }
+  }
+}
+
+/* 푸터 스타일 */
+.main-footer {
+  background-color: #333;
+  padding: 40px 20px;
+  color: #ccc;
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding-bottom: 20px;
+    }
+
+    .footer-logo img {
+      width: 70%;
+    }
+
+    .footer-links {
+      a {
+        margin-right: 15px;
+        color: #ccc;
+        text-decoration: none;
+        font-size: 16px;
+
+        &:hover {
+          color: #1db954;
+        }
+      }
+    }
+
+    .footer-bottom {
+      p {
+        font-size: 13px;
+        padding-top: 20px;
+        line-height: 1.5;
+      }
+ 
+      a {
+        color: #ccc;
+        text-decoration: none;
+
+        &:hover {
+          color: #00c473;
+        }
+      }
+    }
+  }
+}

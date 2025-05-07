@@ -1,0 +1,83 @@
+#container {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+
+  .content-container {
+    position: relative;
+    min-width: 700px;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+  }
+  .admincontent-container {
+    justify-content: center;
+    position: relative;
+    min-width: 700px;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+  }
+  .main-content {
+    position: absolute;
+    top: 0;
+    left: 320px;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    transition: left 0.3s ease;
+    /* 사이드바 상태에 따른 부드러운 이동 효과 */
+  }
+
+  .scrollable {
+    overflow-y: scroll;
+  }
+  /* 사이드바가 숨겨졌을 때 적용할 클래스 */
+  .main-content.hidden-sidebar {
+    left: 10px;
+    /* 사이드바가 숨겨졌을 때의 위치 */
+  }
+
+  //유저 리스트
+  .userButton {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #99bc85;
+    width: 70px;
+    height: 70px;
+  }
+
+  .UserListWrapper {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 250px;
+  }
+
+  .noneTeam{
+    width: 100%;
+    text-align: center;
+  }
+
+}
+// App의 모든 body
+body:has(.Appcontainer) {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  height: 100vh;
+}
+
+body > #root:has(.Appcontainer) {
+  flex: 1 0 auto;
+}
